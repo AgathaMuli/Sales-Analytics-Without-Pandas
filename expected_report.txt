@@ -1,0 +1,31 @@
+=== Sales report: September 2026 ===
+Rows read          : <n>
+Rows used          : <n>
+Rows skipped       : <n>   (<sale_id>: <reason>, ...)
+
+Total revenue (KES): <amount, 2 dp, thousands separated>
+
+Revenue by product (KES)
+  <product>            <amount>
+  ...                  (sorted highest first)
+
+Top 3 products
+  1. <product> - KES <amount>
+  2. <product> - KES <amount>
+  3. <product> - KES <amount>
+
+High-value transactions (>= KES <threshold>): <n>
+  <sale_id>  <date>  <store>  <product>  KES <amount>
+  ...
+
+Transaction revenue statistics
+  mean   : <amount>
+  median : <amount>
+  min    : <amount>
+  max    : <amount>
+
+=== pandas verification ===
+Total revenue      : <MATCH | MISMATCH (pure=<x>, pandas=<y>)>
+Revenue by product : <MATCH | MISMATCH ...>
+Top 3              : <MATCH | MISMATCH ...>
+Mean / median      : <MATCH | MISMATCH ...>
